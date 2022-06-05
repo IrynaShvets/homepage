@@ -1,15 +1,345 @@
 <!DOCTYPE html>
-<html>
-
-<head>
+<html lang="en">
+  <head>
     <meta charset="UTF-8" />
     <title>Résumé</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/eefc54db0e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
+  <body>
     ― Hello World! &#x1F609;
-</body>
+    <main>
+      <div class="resume">
+        <div class="container">
 
+          <!-- block 1 contact info -->
+          <div class="resume__block">
+            <h1 class="contact-info__header">Iryna Shvets</h1>
+            <h3 class="contact-info__sub-header">JUNIOR FRONT-END DEVELOPER</h3>
+            <div class="contact_info_container fh">
+              <div class="contact-info__block">
+                <img
+                  class="contact-info__avatar"
+                  src="assets/avatar1.jpg"
+                  alt="Avatar"
+                />
+              </div>
+
+              <div class="contact-info__block">
+                <ul>
+                  <li>
+                    <a href="" rel="author" class="contact-info__item">
+                      <div class="contact-info__item-icon-wrapper">
+                        <span style="font-size: 18px">
+                          <i class="fa-solid fa-location-dot"></i>
+                        </span>
+                      </div>
+                      <span>Ivano-Frankivsk, Ukraine</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="tel:+380963188646"
+                      rel="author"
+                      class="contact-info__item"
+                    >
+                      <div class="contact-info__item-icon-wrapper">
+                        <span style="font-size: 18px">
+                          <i class="fa-solid fa-mobile"></i>
+                        </span>
+                      </div>
+                      +38 096 318 86 46
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="mailto:irinashwets@ukr.net"
+                      rel="author"
+                      class="contact-info__item"
+                    >
+                      <div class="contact-info__item-icon-wrapper">
+                        <span style="font-size: 18px">
+                          <i class="fa-solid fa-envelope"></i>
+                        </span>
+                      </div>
+                      irinashwets@ukr.net
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="contact-info__block">
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/irina-shvets/"
+                      rel="author"
+                      class="contact-info__item"
+                    >
+                      <div class="contact-info__item-icon-wrapper fa-3x">
+                        <span style="font-size: 30px">
+                          <i
+                            class="fa-brands fa-linkedin fa-beat"
+                            style="--fa-animation-duration: 5s"
+                          ></i>
+                        </span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.facebook.com/irina.shwets.1/"
+                      rel="author"
+                      class="contact-info__item"
+                    >
+                      <div class="contact-info__item-icon-wrapper fa-3x">
+                        <span style="font-size: 30px">
+                          <i
+                            class="fa-brands fa-facebook-square fa-beat"
+                            style="--fa-animation-duration: 5s"
+                          ></i>
+                        </span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/IrynaShvets"
+                      rel="author"
+                      class="contact-info__item"
+                    >
+                      <div class="contact-info__item-icon-wrapper fa-3x">
+                        <span style="font-size: 30px">
+                          <i
+                            class="fa-brands fa-github-square fa-beat"
+                            style="--fa-animation-duration: 5s"
+                          ></i>
+                        </span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- block 2 intro -->
+          <div class="container">
+            <div class="resume__block">
+              <div class="intro">
+                <div class="intro__icon-wrapper">
+                  <svg
+                    class="intro__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="intro_text">
+                  My name is Iryna. I'm studying IT ... Hooray. I never thought
+                  it was so interesting and exciting. I am fascinated by
+                  creating something new, because it always creates the feeling
+                  that you are not standing still, but moving forward. I am
+                  ready to learn, develop, research IT, so I'm here today.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- block 3 skills -->
+          <div class="container">
+            <div class="resume__block">
+              <ul class="skills__list">
+                <li class="skills__item">
+                  <h3 class="skills__header">Skills:</h3>
+                  <div class="skills-info__item">
+                    <div class="skills-info__item-icon-wrapper">
+                      <span style="font-size: 30px">
+                        <i class="fa-brands fa-js"></i>
+                      </span>
+                    </div>
+                    <div class="skills-info__item-icon-wrapper">
+                      <span style="font-size: 30px">
+                        <i class="fa-brands fa-react"></i>
+                      </span>
+                    </div>
+                    <div class="skills-info__item-icon-wrapper">
+                      <span style="font-size: 30px">
+                        <i class="fa-brands fa-sass"></i>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="skills__item">
+                  <h3 class="skills__header">Hobby:</h3>
+                  <div class="skills-info__item">
+                    <div class="skills-info__item-icon-wrapper">
+                      <span style="font-size: 30px">
+                        <i class="fa-solid fa-church"></i>
+                      </span>
+                    </div>
+                    <div class="skills-info__item-icon-wrapper">
+                      <span style="font-size: 30px">
+                        <i class="fa-solid fa-mountain-sun"></i>
+                      </span>
+                    </div>
+                    <div class="skills-info__item-icon-wrapper">
+                      <span style="font-size: 30px">
+                        <i class="fa-solid fa-music"></i>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="skills__item">
+                  <h3 class="skills__header">I love:</h3>
+                  <div class="skills-info__item">
+                    <div class="skills-info__item-icon-wrapper">
+                      <span style="font-size: 30px">
+                        <i class="fa-solid fa-person-swimming"></i>
+                      </span>
+                    </div>
+                    <div class="skills-info__item-icon-wrapper">
+                      <span style="font-size: 30px">
+                        <i class="fa-solid fa-gifts"></i>
+                      </span>
+                    </div>
+                    <div class="skills-info__item-icon-wrapper">
+                      <span style="font-size: 30px">
+                        <i class="fa-solid fa-book"></i>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        <!-- block 4 experiences and additional-info -->
+         <div class="container">
+            <div class="resume__block">
+              <div class="main-info fh">
+              <div class="experiences">
+                    <h3 class="experiences__header">Experience</h3>
+                    <div class="experiences__company">
+                      <div class="experiences__company-header">
+                        <span class="experiences__company-header-durability">
+                          2002-2021
+                        </span>
+                        <h3 class="experiences__company-header-name-top">
+                          Head of the Sector of State Social Inspectors -
+                          Department of Social Protection of the Population</h3>
+                      </div>
+                      <div class="experiences__company-header">
+                        <span class="experiences__company-header-durability">
+                          2021-2022
+                          </span>
+                        <h3 class="experiences__company-header-name">
+                        Training in GoIT</h3>
+                      </div>
+           
+                      <div class="experiences__company-project">
+                        <ul class="experiences__company-project-responsibilities">
+                        
+                          <li>
+                            <span class="experiences__company-project-role">Role: Scrum Master, developer</span>
+                            <a href="https://anna-sergienko.github.io/filmoteka-project/" rel="project" 
+                                class="experiences__company-project-link">
+                            <h3 class="experiences__company-project-name">Filmoteka - team project</h3> 
+                            </a>
+                          </li>
+
+                          <li>
+                            <span class="experiences__company-project-role">Role: developer</span>
+                            <a href="https://phonebook-irynashvets-private.netlify.app/" rel="project" 
+                                class="experiences__company-project-link">
+                              <h3 class="experiences__company-project-name">Phonebook - private project</h3>
+                            </a>
+                          </li>
+
+                          <li>
+                            <span class="experiences__company-project-role">Role: Scrum Master, developer</span>
+                            <a href="https://anna-sergienko.github.io/team-project/index.html" rel="project" 
+                                class="experiences__company-project-link">
+                              <h3 class="experiences__company-project-name">Ice Cream - team project</h3>
+                            </a>
+                          </li>
+
+                          <li>
+                            <span class="experiences__company-project-role">Role: developer</span>
+                            <a href="https://irynashvets.github.io/goit-markup-hw-08/index.html" rel="project" 
+                              class="experiences__company-project-link">
+                              <h3 class="experiences__company-project-name last">WebStudio - private project</h3>
+                            </a>
+                          </li>
+
+                        </ul>
+                      </div>
+                   </div>
+                </div>
+
+               <div class="additional-info fv">
+                 
+                    <div class="additional-info__education">
+                      <h3 class="additional-info__education-header">
+                        Education
+                      </h3>
+
+                      <div class="additional-info__education-university">
+                        <span
+                          class="additional-info__education-university-durability"
+                          >2002-2005</span>
+                        <h3
+                          class="additional-info__education-university-speciality">
+                        Specialist |Finance
+                        </h3>
+                        <p class="additional-info__education-university-name-top">
+                        Chernivtsi Trade and Economics Institute of Kyiv
+                        National Trade and Economics University
+                        </p>
+                      </div>
+
+                    <div class="additional-info__education-university">
+                        <span class="additional-info__education-university-durability">July 2021 - July 2022</span>
+                        <h3 class="additional-info__education-university-speciality">
+                            Full stack developer
+                        </h3>
+                        <p class="additional-info__education-university-name">
+                            IT School GoIT (Kyiv)
+                        </p>
+                    </div>
+
+                  </div>
+
+                  <div class="additional-info__languages">
+                      <h3 class="additional-info__languages-header">
+                        Languages
+                      </h3>
+                      <p class="additional-info__languages-item">
+                        Ukrainian - native
+                      </p>
+                      <p class="additional-info__languages-item">
+                        Russian - native
+                      </p>
+                      <p class="additional-info__languages-item">
+                        English - pre-intermediate
+                      </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

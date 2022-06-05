@@ -9,12 +9,23 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
 
-    --primary-text-color: #181820;
-    --secondary-text-color: #5c5c62;
+    --primary-text-color: #420222;
+    --secondary-text-color: #5f0e36;
     --durability-text-color: #6a737d9c;
-    --icon-color: #6a737d;
-    --border-color: #ff9a0045;
-    --text-decoration-color: #ff9a00;
+    --icon-color: #5e1c3c;
+    --border-color: #a36d87;
+    --text-decoration-color: #30051a;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+:root {
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-duration: 250ms;
 }
 
 .container {
@@ -26,7 +37,7 @@ body {
 .fh {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .fv {
@@ -41,6 +52,11 @@ body {
     box-shadow: 1px 1px 7px 7px #f5f5f5;
     padding: 30px 0;
     max-width: 900px;
+    animation: myMove 5s infinite;
+    background-image: linear-gradient(to right,
+                #e6c9d7 15%,
+                #ffffff 50%,
+                #e6c9d7);
 }
 
 .resume__block {
@@ -91,24 +107,23 @@ body {
 .contact-info__block {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-.contact-info__block--center {
     justify-content: center;
+    margin-right: 50px;
 }
 
 .contact-info__item {
     color: var(--secondary-text-color);
     text-decoration: none;
     display: flex;
-    justify-content: start;
+    transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-info__item:not(:last-child) {
-    margin-bottom: 20px;
+.contact-info__item:hover,
+.contact-info__item:hover {
+    color: #e6127c;
 }
 
+.skills-info__item-icon-wrapper,
 .contact-info__item-icon-wrapper {
     margin-right: 10px;
     width: 20px;
@@ -127,11 +142,17 @@ body {
 
 .contact-info__avatar {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
-    border: 3px solid;
     border-color: var(--text-decoration-color);
+    transition: all 700ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-info__avatar:hover {
+    transform: scale(1.04);
+    cursor: zoom-in;
+    box-shadow: 0 2px 1px var(--icon-color), 0 5px 4px #e6127c;
 }
 
 /* Intro and skills styles */
@@ -162,13 +183,25 @@ body {
     text-align: justify;
 }
 
+.skills__list {
+    display: flex;
+    justify-content: center;
+}
+
+.skills__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 100px;
+}
+
 .skills__header {
     color: var(--secondary-text-color);
     text-align: center;
-    margin-bottom: 15px;
+    margin-right: 10px;
 }
 
-.skills__text {
+.skills-info__item {
     color: var(--secondary-text-color);
     text-align: justify;
 }
@@ -196,9 +229,15 @@ body {
 .experiences__company-header-name {
     color: var(--primary-text-color);
     text-decoration-color: var(--text-decoration-color);
-    text-decoration-line: underline;
     text-align: left;
-    margin-bottom: 20px;
+}
+
+.experiences__company-header-name-top {
+    color: var(--primary-text-color);
+    text-decoration-color: var(--text-decoration-color);
+    text-align: left;
+    margin-bottom: 20px; 
+    width: 300px;
 }
 
 .experiences__company-project {
@@ -213,15 +252,32 @@ body {
     font-size: 15px;
 }
 
-.experiences__company-project-name {
-    color: var(--primary-text-color);
+.experiences__company-project-link {
+    text-decoration: none;
     text-align: left;
-    margin-bottom: 10px;
+    
 }
 
 .experiences__company-project-responsibilities {
     color: var(--secondary-text-color);
     padding-left: 20px;
+}
+
+.experiences__company-project-name {
+    color: var(--secondary-text-color);
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 18px;
+    transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.last {
+margin-bottom: 0;
+}
+
+.experiences__company-project-name:hover,
+.experiences__company-project-name:hover {
+    color: #e6127c;
 }
 
 .additional-info {
@@ -241,14 +297,17 @@ body {
 .additional-info__education-university-durability {
     color: var(--durability-text-color);
     text-align: left;
-    margin-bottom: 10px;
     font-size: 15px;
 }
 
 .additional-info__education-university-speciality {
     color: var(--primary-text-color);
     text-align: left;
-    margin-bottom: 10px;
+}
+
+.additional-info__education-university-name-top {
+    color: var(--secondary-text-color);
+    margin-bottom: 20px;
 }
 
 .additional-info__education-university-name {
@@ -267,4 +326,10 @@ body {
 
 .additional-info__languages-item {
     color: var(--secondary-text-color);
+}
+
+@keyframes myMove {
+    50% {
+        box-shadow: 10px 20px 30px #420222;
+    }
 }

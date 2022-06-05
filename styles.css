@@ -9,12 +9,24 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
 
-    --primary-text-color: #181820;
-    --secondary-text-color: #5c5c62;
+    --primary-text-color: #420222;
+    --secondary-text-color: #5f0e36;
     --durability-text-color: #6a737d9c;
-    --icon-color: #6a737d;
-    --border-color: #ff9a0045;
-    --text-decoration-color: #ff9a00;
+    --icon-color: #5e1c3c;
+    --border-color: #a36d87;
+    --text-decoration-color: #30051a;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+:root {
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-duration: 250ms;
 }
 
 .container {
@@ -26,7 +38,7 @@ body {
 .fh {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .fv {
@@ -41,6 +53,11 @@ body {
     box-shadow: 1px 1px 7px 7px #f5f5f5;
     padding: 30px 0;
     max-width: 900px;
+    animation: myMove 5s infinite;
+    background-image: linear-gradient(to right,
+                #e6c9d7 15%,
+                #ffffff 50%,
+                #e6c9d7);
 }
 
 .resume__block {
@@ -81,6 +98,7 @@ body {
     margin-bottom: 15px;
     text-decoration-color: var(--text-decoration-color);
     text-decoration-line: underline;
+    
 }
 
 .contact-info__sub-header {
@@ -91,22 +109,20 @@ body {
 .contact-info__block {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-.contact-info__block--center {
     justify-content: center;
+    margin-right: 50px;
 }
 
 .contact-info__item {
     color: var(--secondary-text-color);
     text-decoration: none;
     display: flex;
-    justify-content: start;
+    transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-info__item:not(:last-child) {
-    margin-bottom: 20px;
+.contact-info__item:hover,
+.contact-info__item:hover {
+    color: #e6127c;
 }
 
 .contact-info__item-icon-wrapper {
@@ -127,11 +143,18 @@ body {
 
 .contact-info__avatar {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
-    border: 3px solid;
     border-color: var(--text-decoration-color);
+    transition: all 700ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.contact-info__avatar:hover {
+    transform: scale(1.04);
+    cursor: zoom-in;
+    box-shadow: 0 2px 1px var(--icon-color), 0 5px 4px #e6127c;
 }
 
 /* Intro and skills styles */
@@ -267,4 +290,10 @@ body {
 
 .additional-info__languages-item {
     color: var(--secondary-text-color);
+}
+
+@keyframes myMove {
+    50% {
+        box-shadow: 10px 20px 30px #420222;
+    }
 }

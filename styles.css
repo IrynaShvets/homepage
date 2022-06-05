@@ -1,0 +1,335 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+
+    --primary-text-color: #420222;
+    --secondary-text-color: #5f0e36;
+    --durability-text-color: #6a737d9c;
+    --icon-color: #5e1c3c;
+    --border-color: #a36d87;
+    --text-decoration-color: #30051a;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+:root {
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-duration: 250ms;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 900px;
+}
+
+.fh {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.fv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.resume {
+    margin: 50px auto;
+    border: 1px solid #f5f5f5;
+    box-shadow: 1px 1px 7px 7px #f5f5f5;
+    padding: 30px 0;
+    max-width: 900px;
+    animation: myMove 5s infinite;
+    background-image: linear-gradient(to right,
+                #e6c9d7 15%,
+                #ffffff 50%,
+                #e6c9d7);
+}
+
+.resume__block {
+    border-bottom: 3px solid var(--border-color);
+    padding-bottom: 30px;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 576px) {
+
+    .main-info,
+    .contact_info_container {
+        flex-direction: column;
+    }
+
+    .contact_info_container {
+        align-items: center;
+    }
+
+    .contact-info__block:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .experiences {
+        margin-right: 0;
+    }
+}
+
+/* Contact info styles */
+
+.contact-info__header,
+.contact-info__sub-header {
+    text-align: center;
+}
+
+.contact-info__header {
+    color: var(--primary-text-color);
+    margin-bottom: 15px;
+    text-decoration-color: var(--text-decoration-color);
+    text-decoration-line: underline;
+}
+
+.contact-info__sub-header {
+    color: var(--secondary-text-color);
+    margin-bottom: 30px;
+}
+
+.contact-info__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 50px;
+}
+
+.contact-info__item {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+    display: flex;
+    transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-info__item:hover,
+.contact-info__item:hover {
+    color: #e6127c;
+}
+
+.skills-info__item-icon-wrapper,
+.contact-info__item-icon-wrapper {
+    margin-right: 10px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-info__item-icon path {
+    fill: var(--icon-color);
+}
+
+.contact-info__item-icon {
+    height: 1.1428rem;
+    vertical-align: text-bottom;
+}
+
+.contact-info__avatar {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-color: var(--text-decoration-color);
+    transition: all 700ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-info__avatar:hover {
+    transform: scale(1.04);
+    cursor: zoom-in;
+    box-shadow: 0 2px 1px var(--icon-color), 0 5px 4px #e6127c;
+}
+
+/* Intro and skills styles */
+
+.intro {
+    display: flex;
+    justify-content: start;
+}
+
+.intro__icon-wrapper {
+    margin-right: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.intro__icon {
+    height: 1.1428rem;
+    vertical-align: text-bottom;
+}
+
+.intro__icon path {
+    fill: var(--text-decoration-color);
+}
+
+.intro_text {
+    color: var(--secondary-text-color);
+    text-align: justify;
+}
+
+.skills__list {
+    display: flex;
+    justify-content: center;
+}
+
+.skills__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 100px;
+}
+
+.skills__header {
+    color: var(--secondary-text-color);
+    text-align: center;
+    margin-right: 10px;
+}
+
+.skills-info__item {
+    color: var(--secondary-text-color);
+    text-align: justify;
+}
+
+/* Experience and additonal info styles */
+
+.experiences {
+    flex: 1 1 60%;
+    margin-right: 50px;
+}
+
+.experiences__header {
+    color: var(--secondary-text-color);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.experiences__company-header-durability {
+    color: var(--durability-text-color);
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.experiences__company-header-name {
+    color: var(--primary-text-color);
+    text-decoration-color: var(--text-decoration-color);
+    text-align: left;
+}
+
+.experiences__company-header-name-top {
+    color: var(--primary-text-color);
+    text-decoration-color: var(--text-decoration-color);
+    text-align: left;
+    margin-bottom: 20px; 
+    width: 300px;
+}
+
+.experiences__company-project {
+    margin-left: 15px;
+    margin-bottom: 25px;
+}
+
+.experiences__company-project-role {
+    color: var(--durability-text-color);
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.experiences__company-project-link {
+    text-decoration: none;
+    text-align: left;
+    
+}
+
+.experiences__company-project-responsibilities {
+    color: var(--secondary-text-color);
+    padding-left: 20px;
+}
+
+.experiences__company-project-name {
+    color: var(--secondary-text-color);
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 18px;
+    transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.last {
+margin-bottom: 0;
+}
+
+.experiences__company-project-name:hover,
+.experiences__company-project-name:hover {
+    color: #e6127c;
+}
+
+.additional-info {
+    flex: 1 1 40%;
+}
+
+.additional-info__education {
+    margin-bottom: 20px;
+}
+
+.additional-info__education-header {
+    color: var(--secondary-text-color);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.additional-info__education-university-durability {
+    color: var(--durability-text-color);
+    text-align: left;
+    font-size: 15px;
+}
+
+.additional-info__education-university-speciality {
+    color: var(--primary-text-color);
+    text-align: left;
+}
+
+.additional-info__education-university-name-top {
+    color: var(--secondary-text-color);
+    margin-bottom: 20px;
+}
+
+.additional-info__education-university-name {
+    color: var(--secondary-text-color);
+}
+
+.additional-info__languages {
+    margin-bottom: 20px;
+}
+
+.additional-info__languages-header {
+    color: var(--secondary-text-color);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.additional-info__languages-item {
+    color: var(--secondary-text-color);
+}
+
+@keyframes myMove {
+    50% {
+        box-shadow: 10px 20px 30px #420222;
+    }
+}

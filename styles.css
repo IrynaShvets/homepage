@@ -183,22 +183,38 @@ ul {
     text-align: justify;
 }
 
-.skills__list {
+@media screen and (min-width: 577px) {
+    .skills__list {
     display: flex;
-    justify-content: center;
+    justify-content: center; 
+    }
+
+    .skills__item {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
+        margin-right: 100px;
+    }
+
+    .skills__header {
+        color: var(--secondary-text-color);
+        text-align: center;
+        margin-right: 10px;
+    }
 }
 
-.skills__item {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-right: 100px;
-}
-
-.skills__header {
-    color: var(--secondary-text-color);
-    text-align: center;
-    margin-right: 10px;
+@media screen and (max-width: 576px) {
+    .skills__item {
+        display: flex;
+        justify-content: center;
+        margin-right: 100px;
+    }
+    
+    .skills__header {
+        color: var(--secondary-text-color);
+        text-align: center;
+        margin-right: 50px;
+    }
 }
 
 .skills-info__item {
